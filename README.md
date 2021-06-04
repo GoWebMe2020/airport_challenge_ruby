@@ -1,15 +1,18 @@
-## Project title
-* Airport Challenge
+# Project title
+## Airport Challenge
 
 ## Motivation
 
-Client request for a program that can perform the following functions.
-* Instruct a plane to land at the airport
-* Take off from the airport and confirm it has left.
-* Prevent a plane from landing when the airport is full.
-* Defauly airport capacity that can be overidden.
-* Prevent a plane from taking off or landing during stormy weather. 
-* Planes that have already landed cannot land again.
+Build a programme to manage the safe landing and takeoff of planes from airports.
+
+## User Stories
+
+- [x] Instruct a plane to land at the airport
+- [x] Take off from the airport and confirm it has left.
+- [x] Prevent a plane from landing when the airport is full.
+- [x] Defauly airport capacity that can be overidden.
+- [x] Prevent a plane from taking off or landing during stormy weather. 
+- [x] Planes that have already landed cannot land again.
 
 ## Build status
 * Initial files being created
@@ -17,6 +20,7 @@ Client request for a program that can perform the following functions.
 * Completed all user stories (Day2)
 * Refracted the code from Plane.new to double(:plane) to isolate tests.
 * Added a bonus test to land and take off multiple planes.
+* Updating README.
 
 ## Code style
 * Test-driven development
@@ -25,24 +29,45 @@ Client request for a program that can perform the following functions.
 ## Tech/framework used
 * VS Code (Live Share)
 * GitHub
-* Rspec
-* Bundler
 * Zoom
 
-## Built with
+* Rspec
+* Bundler
 * Ruby
 
 ## Installation
 * Install rspec
-* Install bundler
 * Run bundler
 * Test in irb
 * Run rspec
 
 ## Tests
-* Initially ran the test in irb as I thought the program should run. I fixed the initial errors.
-* Ran tests to respond to the 2 classes.
-* Ran tests on methods.
+#### 15 examples, 0 failures
+
+#### Airport
+* lands and  takesoff a number of planes
+  - #land
+  -  instructs a plane to land at the airport safely
+  -  raises an error when airport is full when a plane tries to land
+  -  does not allow a plane to land in stormy weather
+  -  does not allow a plane to land again
+  - #take_off
+  -  instructs a plane to take off from the airport safely
+  -  instructs a plane to take off and remove from airport
+  -  does not allow a plane to takeoff in stormy weather
+
+#### User Stories
+  - lands a plane at the airport after instruction to land
+  - lets a plane take off so it is no longer at the airport
+  - prevents a plane from landing when a airport is full
+  - sets the capacity when argument not given
+  - does not allow a plane to land when it is stormy
+  - does not allow a plane to takeoff when it is stormy
+  - does not allow a plane to land if the plane has already landed
+
+## Screenshots
+
+N/Aß
 
 ## How to use?
 * You can create an airport - airport = Airport.new (the default capacity will be 20 if no argument is given when instatiating a new airport).
@@ -51,7 +76,7 @@ Client request for a program that can perform the following functions.
 * Plane to takeoff - airport.takeoff(plane), this will not work if the weather is stormy.
 
 ## Credits
-* Dewald Viljoen
+
 * JP Ferreira
 
 
